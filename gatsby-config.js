@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Why I Should Be At Your Hackathon`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+      `gatsby-plugin-react-helmet`,
+      `gatsby-plugin-stylus`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,6 +14,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+      {
+	  resolve: `gatsby-plugin-prefetch-google-fonts`,
+	  options: {
+	      fonts: [
+		  {
+		      family: `Lexend Deca`,
+		  },
+	      ],
+	  },
+      },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
